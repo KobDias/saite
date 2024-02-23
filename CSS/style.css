@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* #253C59 */
+/* #5D7A8C */
+/* #99B4BF */
+/* #D9B70D */
+/* #BF8D30 */
+
+body{
+    background-color: #253C59;
+}
+
+nav{ 
+    width: 100%;
+    font-family: "Playfair Display", serif;
+    font-size: large;
+    border-bottom: 3px solid white;
+    justify-content: space-between;
+    padding-top: 25px;
+    gap: 200px
+}
+
+ul{
+    width: 100%;
+    text-align: justify;
+    display: flex;
+    list-style: none;
+    margin-bottom: 10px;
+}
+li{
+    padding-left: 8px;
+    font-weight: 1000;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+header{
+    justify-content: space-between;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0px 25px;
+    padding-bottom: 50px;
+}
+#caixa{
+    border-bottom: 1000px #fff;
+}
+
+.text-animation{
+    font-size: 45px;
+    font-weight: 300;
+    color: antiquewhite;
+}
+
+.text-animation span{
+    position: relative;
+}
+
+.text-animation span::before{
+    content: "";
+    color: #fff;
+    animation: teixto 10s infinite;
+}
+
+.text-animation span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #fff;
+    right: -10px;
+    animation: cursor .8s infinite, digita 10s steps(15) infinite;
+    width: calc(100% + 15px);
+    background-color: #253C59;
+}
+
+#caixinha{
+    background-color: #253C59;
+}
+
+@keyframes digita{
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%, 25%, 40%, 45%, 60%, 65%, 80%, 85%{
+        width: calc(100% + 15px);
+    }
+}
+
+@keyframes cursor{
+    0%{
+        border-left: 2px solid #253C59;
+    }
+}
+
+@keyframes teixto {
+    0%, 25%{
+        content: "Gramado - RS!";
+    }
+    26%, 50%{
+        content: "Jericoacoara - CE!";
+    }
+    51%, 75%{
+        content: "Fernando de Noronha - PE!";
+    }
+    76%, 100%{
+        content: "Paranapiacaba - SP!";
+    }
+}
