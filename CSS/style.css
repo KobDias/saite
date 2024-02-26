@@ -11,6 +11,10 @@
 
 body{
     background-color: #253C59;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #fff;
 }
 
 nav{ 
@@ -29,14 +33,19 @@ ul{
     display: flex;
     list-style: none;
     margin-bottom: 10px;
+    gap: 30px;
 }
 li{
     padding-left: 8px;
     font-weight: 1000;
+    border-top: 4px solid #253C59;
 }
 a{
     text-decoration: none;
     color: #fff;
+}
+li:hover{
+    border-top: 4px solid #fff;
 }
 
 header{
@@ -47,14 +56,14 @@ header{
     padding: 0px 25px;
     padding-bottom: 50px;
 }
-#caixa{
-    border-bottom: 1000px #fff;
+.texto{
+    font-size: 40px;
 }
 
 .text-animation{
     font-size: 45px;
     font-weight: 300;
-    color: antiquewhite;
+    color: #fff;
 }
 
 .text-animation span{
@@ -64,7 +73,7 @@ header{
 .text-animation span::before{
     content: "";
     color: #fff;
-    animation: teixto 10s infinite;
+    animation: teixto 8s infinite;
 }
 
 .text-animation span::after{
@@ -76,6 +85,16 @@ header{
     animation: cursor .8s infinite, digita 10s steps(15) infinite;
     width: calc(100% + 15px);
     background-color: #253C59;
+}
+
+.direita{
+    padding: 200px;
+    float: right;
+}
+.esqueda{
+    float: left;
+    margin-right: 20%;
+    margin-left: 2%;
 }
 
 #caixinha{
@@ -105,7 +124,7 @@ header{
         content: "Jericoacoara - CE!";
     }
     51%, 75%{
-        content: "Fernando de Noronha - PE!";
+        content: "Fernando de Noronha!";
     }
     76%, 100%{
         content: "Paranapiacaba - SP!";
